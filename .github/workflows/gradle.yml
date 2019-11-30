@@ -1,0 +1,19 @@
+name: python-ms-template-ci
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v1
+      - name: Build docker image
+        run: docker-compose build
+      - name: publish
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker login docker.pkg.github.com -u mishalshah92 -p ${{ secrets.GITHUB_TOKEN }}
+          docker tag docker-template_hello-docker:latest docker.pkg.github.com/lazy-leo/docker-template/docker-template:latest
+          docker push docker.pkg.github.com/lazy-leo/docker-template/docker-template:latest
