@@ -1,6 +1,6 @@
 # docker-template
 
-![](https://github.com/zero-templates/docker-template/workflows/docker-template-ci/badge.svg)
+![](https://github.com/lazy-leo/docker-template/workflows/docker-template-ci/badge.svg)
 
 The basic docker example, building greeting python application into docker container. 
 
