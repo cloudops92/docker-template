@@ -25,5 +25,5 @@ $ docker run docker-template_hello-docker <your_name>
 
 ## Overview
 
-- **Build Pipeline**: <https://github.com/lazy-leo/docker-template/actions/new>
+- **Build Pipeline**: <https://github.com/lazy-leo/docker-template/actions>
 - **Maintainer**: lazzy.leoo@gmail.com
