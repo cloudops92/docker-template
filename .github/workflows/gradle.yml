@@ -1,4 +1,4 @@
-name: python-ms-template-ci
+name: docker-template-ci
 
 on: [push, pull_request]
 
