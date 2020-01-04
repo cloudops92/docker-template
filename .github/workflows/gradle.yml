@@ -13,9 +13,3 @@ jobs:
         run: docker-compose build
       - name: Test docker image
         run: docker-compose up --exit-code-from hello-docker
-      - name: publish
-        if: github.ref == 'refs/heads/master'
-        run: |
-          docker login docker.pkg.github.com -u mishalshah92 -p ${{ secrets.GITHUB_TOKEN }}
-          docker tag docker-template_hello-docker:latest docker.pkg.github.com/lazy-leo/docker-template/docker-template:latest
-          docker push docker.pkg.github.com/lazy-leo/docker-template/docker-template:latest
